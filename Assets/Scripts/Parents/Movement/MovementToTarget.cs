@@ -11,7 +11,6 @@ public class MovementToTarget : Movement
     {
         if (!target) return;
         Vector3 desired = target.position + offset;
-        desired.z = -10f;
         transform.position = Vector3.Lerp(transform.position, desired, moveSpeed * Time.deltaTime);
     }
     public void SetTarget(Transform newTarget)

@@ -6,6 +6,11 @@ public class MainHomeDamageReceiver : DamageReceiver
 {
     protected override void OnDead()
     {
-        
+
+    }
+    protected override void ResetValue()
+    {
+        base.ResetValue();
+        baseMaxHP = 100f;
     }
 }

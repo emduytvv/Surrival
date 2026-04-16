@@ -11,6 +11,6 @@ public class TextLevelPlayer : BaseText
     }
     protected override void ShowText()
     {
-        textMeshProUGUI.text = "Lv." + currentLevel.ToString();
+        textMeshProUGUI.text = currentLevel.ToString();
     }
 }

@@ -28,7 +28,7 @@ public class CameraMovement : MovementToTarget
     public void Shake()
     {
         shakeTimer = shakeDuration;
-        Debug.Log("shake");
+        // Debug.Log("shake");
     }
     protected override void Start()
     {
