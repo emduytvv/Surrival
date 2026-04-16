@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09397f8511fa53b40b759843ec2a9e8e, type: 3}
+  m_Name: UpgradeDamage
+  m_EditorClassIdentifier: 
+  upgradeMaxHP: 0
+  upgradeMaxMana: 0
+  upgradeSpeed: 0
+  upgradeAttack: 0
+  donateGold: 0
+  donateBook: 0
+  donateStone: 0
+  upgradePercentHP: 0
+  upgradePercentMana: 0
+  upgradeDamage: 1
+  upgradePercentDamage: 0
+  description: "T\u0103ng 1 damage"
+  sprite: {fileID: 21300000, guid: 4ede86ee6cb713b4ca232399ccfafa0a, type: 3}
