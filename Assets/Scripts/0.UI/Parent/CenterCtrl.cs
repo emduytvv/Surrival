@@ -22,6 +22,8 @@ public class CenterCtrl : SaiMonoBehaviour
     public Transform SkillTreeMainHomeManager => skillTreeMainHomeManager;
     [SerializeField] protected Transform levelUpStatsManager;
     public Transform LevelUpStatsManager => levelUpStatsManager;
+    [SerializeField] protected Transform uIGameOver;
+    public Transform UIGameOver => uIGameOver;
     protected override void LoadComponents()
     {
         base.LoadComponents();
@@ -30,6 +32,7 @@ public class CenterCtrl : SaiMonoBehaviour
         LoadSkillTreeManager();
         LoadSkillTreeMainHomeManager();
         LoadLevelUpStatsManager();
+        LoadUIGameOver();
     }
     private void LoadMusicSetting()
     {
@@ -64,5 +67,11 @@ public class CenterCtrl : SaiMonoBehaviour
         skillTreeMainHomeManager = transform.Find("SkillTreeMainHomeManager");
         skillTreeMainHomeManager.gameObject.SetActive(false);
         Debug.LogWarning(transform.name + ": LoadSkillTreeMainHomeManager()", gameObject);
+    }
+    private void LoadUIGameOver()
+    {
+        if (uIGameOver != null) return;
+        uIGameOver = transform.Find("UIGameOver");
+        Debug.LogWarning(transform.name + ": LoadUIGameOver()", gameObject);
     }
 }

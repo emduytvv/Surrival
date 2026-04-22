@@ -13,6 +13,8 @@ public class CenterMenu : SaiMonoBehaviour
     public Transform MusicSetting => musicSetting;
     [SerializeField] protected Transform menu;
     public Transform Menu => menu;
+    [SerializeField] protected Transform history;
+    public Transform History => history;
     protected override void Awake()
     {
         instance = this;
@@ -23,6 +25,7 @@ public class CenterMenu : SaiMonoBehaviour
         LoadMapSelect();
         LoadMusicSetting();
         LoadMenu();
+        LoadHistory();
     }
     private void LoadMapSelect()
     {
@@ -44,8 +47,14 @@ public class CenterMenu : SaiMonoBehaviour
     {
         if (menu != null) return;
         menu = transform.Find("Menu");
-        menu.gameObject.SetActive(false);
         Debug.LogWarning(transform.name + ": LoadMenu()", gameObject);
 
+    }
+    private void LoadHistory()
+    {
+        if (history != null) return;
+        history = transform.Find("History");
+        history.gameObject.SetActive(false);
+        Debug.LogWarning(transform.name + ": LoadHistory()", gameObject);
     }
 }

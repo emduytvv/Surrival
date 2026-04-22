@@ -13,10 +13,13 @@ public class BtnStart : BaseBtn
 
     private void LoadSceneByParentName()
     {
-        string mapName = transform.parent.name;
-        string index = mapName.Replace("Map_", "");
-
-        if (int.TryParse(index, out int sceneIndex))
-            SceneManager.LoadScene(sceneIndex);
+        if (transform.parent.name == "Tutorial") { SceneManager.LoadScene(transform.parent.name); return; }
+        string namePreviousMap = GetPreviousMap.GetNamePreviousMap(transform.parent.name);
+        if (namePreviousMap == null || PlayerPrefs.GetInt(namePreviousMap, 0) != 1)
+        {
+            Debug.Log("Map is locked", gameObject);
+            return;
+        }
+        SceneManager.LoadScene(transform.parent.name);
     }
 }

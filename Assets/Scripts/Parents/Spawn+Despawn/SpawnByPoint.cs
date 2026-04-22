@@ -28,7 +28,7 @@ public abstract class SpawnByPoint : Spawner
         points = GetComponentInChildren<Points>();
         Debug.LogWarning(transform.name + ": LoadPoint()", gameObject);
     }
-    protected void FixedUpdate()
+    protected void OnEnable()
     {
         this.listPoints = points.ListPoints;
     }

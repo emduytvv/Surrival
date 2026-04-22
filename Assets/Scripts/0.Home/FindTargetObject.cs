@@ -7,6 +7,7 @@ public abstract class FindTargetObject : SaiMonoBehaviour
 {
     [SerializeField] protected LayerMask enemyLayer;
     [SerializeField] protected float range = 3f;
+    public float Range => range;
     [SerializeField] protected Transform currentTarget;
     [SerializeField] protected float timer = 2f;
     [SerializeField] protected float timerMax = 2f;

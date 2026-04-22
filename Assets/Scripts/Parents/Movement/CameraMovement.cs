@@ -6,6 +6,7 @@ public class CameraMovement : MovementToTarget
 {
     protected static CameraMovement instance;
     public static CameraMovement Instance => instance;
+    protected Vector3 offset = new Vector3(0, 0, -10);
 
     private Vector3 shakeOffset = Vector3.zero;
     private float shakeTimer = 0f;

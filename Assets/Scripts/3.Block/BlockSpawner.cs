@@ -8,7 +8,7 @@ public class BlockSpawner : SpawnByPoint
     [Header("Block Spawner")]
     protected static BlockSpawner instance;
     public static BlockSpawner Instance => instance;
-    protected string objectName = "Block_1";
+    protected string objectName = "Block";
     bool isSpawnFirst = true;
     protected override void Reset()
     {
